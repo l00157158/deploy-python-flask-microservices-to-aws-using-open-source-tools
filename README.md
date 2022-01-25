@@ -1,3 +1,5 @@
+See Week 7 notes for instructions on using this repo.
+
 # Deploy Python Flask API to AWS Using Open Source Tools
 ---
 
