@@ -23,7 +23,7 @@ variable "vpc_dns_hostnames" {
 variable "availability_zone" {
   description = "A list of allowed availability zones."
   type        = list(any)
-  default     = ["us-east-1a", "us-east-1c"]
+  default     = ["eu-west-1a", "eu-west-1c"]
 }
 
 # A boolean flag to map the public IP on launch for public subnets.  Defaults true.
@@ -79,7 +79,7 @@ variable "maximum_capacity" {
 variable "instance_type" {
   description = "EC2 instance type for ECS launch configuration."
   type        = string
-  default     = "m5.large"
+  default     = "t2.micro"
 }
 
 # This variables defines the ECS service name.
