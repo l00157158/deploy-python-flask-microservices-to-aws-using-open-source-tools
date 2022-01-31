@@ -46,6 +46,22 @@ def create_entry():
         'song': song
     })
 
+@app.route("/get/<string:artist>")
+def get_artist(artist):
+    resp = client.get_item(
+        TableName=dynamoTableName,
+        Key={
+            'artist': {'S': artist }
+        }
+    )
+    item = resp.get('Item')
+    if not item:
+    	return jsonify({'error': 'Artist does not exist'}), 404
+    	
+    return jsonify({
+        'artist': item.get('artist').get('S'),
+        'song': item.get('song').get('S')
+    })
 
 if __name__ == '__main__':
     app.run(threaded=True,host='0.0.0.0',port=5000)
