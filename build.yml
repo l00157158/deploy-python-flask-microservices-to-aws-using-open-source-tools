@@ -1,10 +1,5 @@
 version: 0.2
 phases:
-  install:
-    commands:
-      - sudo yum install docker -y
-      - sudo service start docker
-      - sudo usermod -a -G docker $USER
   build:
     commands:
       - cd app
