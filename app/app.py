@@ -5,6 +5,7 @@ import os
 import boto3
 
 from flask import Flask, jsonify, request
+from flask_swagger import swagger
 app = Flask(__name__)
 
 client = boto3.client('dynamodb', region_name='eu-west-1')
@@ -62,6 +63,13 @@ def get_artist(artist):
         'artist': item.get('artist').get('S'),
         'song': item.get('song').get('S')
     })
+
+@app.route("/spec")
+def spec():
+    swag = swagger(app)
+    swag['info']['version'] = "2.0"
+    swag['info']['title'] = "Rest API"
+    return jsonify(swag)
 
 if __name__ == '__main__':
     app.run(threaded=True,host='0.0.0.0',port=5000)
