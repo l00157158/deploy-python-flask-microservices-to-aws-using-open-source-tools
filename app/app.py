@@ -58,6 +58,24 @@ def create_entry():
 
 @app.route("/get/<string:artist>")
 def get_artist(artist):
+    """
+    get an item
+    ---
+    produces:
+     - application/json
+    parameters:
+     - in: path
+         name: artist
+         required: true
+         schema:
+           type: string
+         description: the artist
+    responses:
+     '200':
+       description: response
+     '404':
+       description: not found
+    """
     resp = client.get_item(
         TableName=dynamoTableName,
         Key={
