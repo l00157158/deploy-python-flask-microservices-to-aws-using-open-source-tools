@@ -25,6 +25,15 @@ def hello():
 
 @app.route("/get-items")
 def get_items():
+    """
+    get items
+    ---
+    produces:
+     - application/json
+    responses:
+     '200':
+       description: response
+    """
     return jsonify(client.scan(TableName=dynamoTableName))
 
 @app.route("/add", methods=["POST"])
