@@ -1,4 +1,4 @@
 app:
-  applicationId: 7b955dea-f4db-430b-9d13-3e615c038fe1
-  host: http://ecsalb-733313937.eu-west-1.elb.amazonaws.com
+  applicationId: 81de8b4d-3429-4da4-a7f1-c02b3425cbc1
+  host: http://ecsalb-1279245789.eu-west-1.elb.amazonaws.com
   env: Development
