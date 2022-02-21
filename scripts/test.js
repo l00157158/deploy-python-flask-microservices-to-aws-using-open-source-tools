@@ -30,7 +30,7 @@ export function scenario_1() {
   let response
 
   // get-items test
-  response = http.get('http://ecsalb-309629614.eu-west-1.elb.amazonaws.com/get-items', {
+  response = http.get('http://ecsalb-1352864412.eu-west-1.elb.amazonaws.com/get-items', {
     headers: {
       'Content-Type': 'application/json',
     },
