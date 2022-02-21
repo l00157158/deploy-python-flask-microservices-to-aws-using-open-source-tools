@@ -1,3 +1,5 @@
+[![HawkScan](https://github.com/PGreaneyLYIT/deploy-python-flask-microservices-to-aws-using-open-source-tools/actions/workflows/hawkscan.yml/badge.svg)](https://github.com/PGreaneyLYIT/deploy-python-flask-microservices-to-aws-using-open-source-tools/actions/workflows/hawkscan.yml)
+
 See Week 7 notes for instructions on using this repo.
 
 # Deploy Python Flask API to AWS Using Open Source Tools
