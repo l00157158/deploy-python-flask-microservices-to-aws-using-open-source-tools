@@ -6,11 +6,12 @@ import http from 'k6/http'
 export const options = {
   ext: {
     loadimpact: {
-      distribution: { 'amazon:us:ashburn': { loadZone: 'amazon:us:ashburn', percent: 100 } },
-      apm: [],
+      name: 'cloud-test',
     },
   },
-  thresholds: {},
+  duration: '1m',
+  vus: 50
+  thresholds: {http_req_duration: ['p(95)<500'],},
   scenarios: {
     Scenario_1: {
       executor: 'ramping-vus',
